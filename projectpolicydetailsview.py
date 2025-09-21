@@ -1,0 +1,47 @@
+from sqlalchemy import Column, Integer, String, DateTime,Text,DECIMAL
+from repository.BaseEntity import Base
+from sqlalchemy.orm import relationship
+
+
+class ProjectPolicyDetails(Base):
+    __tablename__ ='vw_project_policy_details'
+
+    id = Column(Integer, primary_key=True)
+    project_id = Column(Integer, nullable=False)
+    policy_id = Column(Integer, nullable=False)
+    llm_name = Column(String(200)) 
+    log_level=Column(String(50), nullable=False)
+    code_checker=Column(String(1), nullable=False)
+    anonymize=Column(String(1), nullable=False)
+    block_pii=Column(String(1), nullable=False)
+    policy_type=Column(String(20), nullable=False)
+    topic_name=Column(String(40) )
+    regex_name = Column(String(50))
+    regex_value = Column(String(200))
+    metaprompt_id = Column(Integer)
+    metaprompt_value = Column(Text)
+    entity_value = Column(String(40))
+    license_key=Column(Text,nullable=False)
+    watermark_text=Column(Text)
+    pii_name =Column(String(100))
+    pii_desc = Column(String(200))
+    banned_phrase=Column(Text)
+    project_name = Column(String(100), nullable=False)
+    policy_name = Column(String(100), nullable=False) 
+    metaprompt_name = Column(String(50))
+    injectionthreshold=Column(DECIMAL(3, 2), nullable=False)
+    hatefulsentimentthreshold=Column(DECIMAL(3, 2), nullable=False)
+    toxicitythreshold=Column(DECIMAL(3, 2), nullable=False)
+    project_desc  = Column(Text, nullable=False)
+    app_ci=Column(String(100), nullable=False)
+    app_url=Column(String(500))     
+    owner_name=Column(String(500))
+    owner_handle=Column(String(100))
+    owner_email=Column(String(200))
+    approver_name=Column(String(500))
+    approver_handle=Column(String(100))
+    approver_email=Column(String(200))
+    from_date=Column(DateTime, nullable=False)
+    to_date=Column(DateTime, nullable=False)
+    locked=Column(String(1), nullable=False)
+    active=Column(String(1), nullable=False)
