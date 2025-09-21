@@ -1,0 +1,124 @@
+{
+    "plugin_configs": {
+        "plugins": {
+            "PII": "PIIChecker",
+            "Toxicity": "Sentiment_Toxicity",
+            "PromptInjection": "PromptInjectionChecker",
+            "Topics": "TopicsChecker",
+            "RegEx": "RegExesChecker",
+            "MetaPrompts": "MetaPromptsHandler",
+            "CodeChecker": "CodeChecker",
+            "Anonymizer": "DataAnonymyser",
+            "Entity": "EntityChecker",
+            "BannedPhrase":"BannedPhraseChecker"
+        }
+    },
+   
+    "constants":{
+        "POLICY_TYPE":{
+            "BLOCK":"BLOCK",
+            "LOG":"LOG"
+        },
+        "Violations":{
+            "PII":"PII",
+            "TOPIC":"Topic",
+            "PromptInjection":"PromptInjection",
+            "Toxicity":"Toxicity",
+            "NegativeSentiment":"NegativeSentiment",
+            "Regex":"Regex",
+            "CODE":"CODE",
+            "BannedPhrase":"Banned Phrase",
+            "Entity":"Entity"
+        },
+        "FailureReasons":{
+            "PII":"PII Data found",
+            "TOPIC":"Blocked Topics Found",
+            "PromptInjection":"Prompt Injection Found",
+            "NegativeSentiment":"Negative Sentiment Found",
+            "Toxicity":"Toxic Prompt Found",
+            "Regex":"Matched Regex Found",
+            "CODE":"Programming Code found",
+            "BannedPhrase":"Banned Phrase found",
+            "Entity":"Blocked Entity found"
+        },
+        "INVOCATION_TYPE":{
+            "REQ":"REQUEST",
+            "RESP":"RESPONSE",
+            "EMBED":"EMBED",
+            "QUERY":"QUERY"
+        },
+        "LOG_LEVEL":{
+            "INFO":"INFO",
+            "WARN":"WARN",
+            "ALERT":"ALERT"
+        },
+        "MODEL_TRAIN_STATUS":{
+            "NO_MODEL":"NO_MODEL",
+            "MODEL_OUTDATED":"MODEL_OUTDATED",
+            "TRAIN_INIT":"TRAIN_INIT",
+            "TRAIN_PROGRESS":"TRAIN_INPROGRESS",
+            "TRAIN_SUCCESS":"TRAIN_SUCCESS",
+            "TRAIN_FAILURE":"TRAIN_FAILURE"
+        },
+        "FILE_PATHS":{
+            "OUTPUTFILE":"output.txt",
+            "MODELFILE":"model-best",
+            "STATUSFILENAME":"modelstatus",
+            "ZIPFILEPATH":"modelZip"
+        },
+        "USER_ROLES":{
+            "SUPER-ADMIN":"SUPER-ADMIN",
+            "APPROVER":"APPROVER",
+            "ADMIN":"ADMIN",
+            "VIEWER":"VIEWER"
+        },
+        "Industry":{
+            "Banking":"Banking",
+            "Capital Markets":"Capital Markets",
+            "CPG":"CPG",
+            "CMI":"CMI",
+            "Utilities":"Utilities",
+            "Healthcare":"Healthcare",
+            "High Tech":"High Tech",
+            "Insurance":"Insurance",
+            "Life Sciences":"Life Sciences",
+            "Manufacturing":"Manufacturing",
+            "Public Services":"Public Services",
+            "Retail":"Retail",
+            "TTH":"TTH"
+        },
+        "Geography":{
+            "US":"US",
+            "UK":"UK",
+            "Europe":"Europe",
+            "India":"India",
+            "APAC":"APAC",
+            "LATAM":"LATAM",
+            "Africa":"Africa",
+            "NorthAmerica":"North America"
+        },
+        "AppSettings":{
+            "APPROVAL_FLOW":"APPROVAL_FLOW"
+        },
+        "APPROVE_SETTING":["Straight Through","Manual"],
+        "USER_EVENTS":{
+            "CHANGE_PWD" : "Change_password",
+            "LOCKED" : "Locked",
+            "UNLOCK":"Unlock",
+            "ACTIVATE" : "Activate",
+            "DEACTIVATE" : "Deactivate",
+            "RESET_PWD" : "Reset",
+            "USER_UPDATE" : "User_update"
+        },
+        "ADMIN_EVENTS":{
+            "APP_PUBLISH" : "App Publish",
+            "IMPORT_APPLICATION" : "Import Application",
+            "ROLLBACK_APPLICATION" : "Rollback Application",
+            "ACTIVE_APPLICATION" : "Activate Application",            
+            "DEACTIVE_APPLICATION" : "Deactivate Application",
+            "LOCK_APPLICATION" : "Lock Application",
+            "UNLOCK_APPLICATION" : "Unlock Application",
+            "USER_DEANON" : "Anonomized user search"
+        }
+    }
+}
